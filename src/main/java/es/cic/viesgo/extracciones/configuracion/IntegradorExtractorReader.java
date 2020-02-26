@@ -21,11 +21,15 @@ public class IntegradorExtractorReader implements ItemReader<IntegradorExtractor
     public IntegradorExtractorBean read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException
     {
 
+	IntegradorExtractorBean name = new IntegradorExtractorBean();
+
 	// Trafos - ADMS
 	Set<Trafo> trafosAdms = trafosAdms();
 
 	// Señales - ARM
 	senalesArm();
+
+	return name;
     }
 
 
